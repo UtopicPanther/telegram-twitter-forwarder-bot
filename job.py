@@ -96,6 +96,13 @@ class FetchAndSendTweetsJob(Job):
             for tweet in tweets:
                 self.logger.debug("- Got tweet: {}".format(tweet.full_text))
 
+                try:
+                    if hasattr(tweet, "favorited") and tweet.favorited == True:
+                        continue
+                except:
+                    print("haha, my code is wrong, please reported to me")
+                    print("my twitter api permission is under review. I can not test myself :-(")
+
                 # Check if tweet contains media, else check if it contains a link to an image
                 extensions = ('.jpg', '.jpeg', '.png', '.gif')
                 pattern = '[(%s)]$' % ')('.join(extensions)
