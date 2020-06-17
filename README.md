@@ -1,3 +1,12 @@
+这是一个 telegram-twitter-forwarder-bot 的魔改版本
+
+- [x] 只转发当且仅当存在至少一张图片的 Tweet
+- [ ] 不转发我已 Like 的 Retweet
+
+**由于我的 Twitter API 申请尚未得到回应，我并没有办法实际测试这些代码，使用本代码后果自负**
+
+# Original README 原始 README
+
 # telegram-twitter-forwarder-bot
 ![logo](logo/logo.png)
 
